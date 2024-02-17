@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>INCENTIVOS</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Para evitar el desbordamiento del cuerpo */
+      }
+      iframe {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 50px);
+        border: none; /* Eliminar borde del iframe */
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <div class="referencia">INCENTIVOS</div>
+    </header>
+
+    <iframe
+      id="botonesimagenes"
+      style="margin-top: 30px"
+      src="../SUPERVISORES/incentivos.html"
+    ></iframe>
+
+    <section class="container" id="menuContainer">
+      <div>
+        <!-- Botones del menú -->
+        <a href="index_promotores.html" class="menu-button">Inicio</a>
+        <a href="promotores_promos_ung.html" class="menu-button">UNG - Vinos</a>
+        <a href="promotores_promos_cvza.html" class="menu-button">Cervezas</a>
+        <a href="promotores_promos_mkp.html" class="menu-button">Almacen</a>
+        <a href="promotores_incentivos.html" class="menu-button">Incentivos</a>
+      </div>
+    </section>
+    <script>
+      window.onload = function () {
+        var iframe = document.getElementById("botonesimagenes");
+        var iframeDocument =
+          iframe.contentDocument || iframe.contentWindow.document;
+
+        var botonesImagenes =
+          iframeDocument.querySelectorAll(".buttons-container");
+        botonesImagenes.forEach(function (botonContainer) {
+          botonContainer.style.display = "none";
+        });
+
+        var botonesEliminar = iframeDocument.querySelectorAll("button");
+        botonesEliminar.forEach(function (botonEliminar) {
+          if (botonEliminar.innerText === "Eliminar") {
+            botonEliminar.style.display = "none";
+          }
+          // Ocultar el menú desplegable
+          var header = iframeDocument.getElementById("header");
+          header.style.display = "none";
+
+          // Ocultar el contenedor de botones
+          var container = iframeDocument.querySelector(".container");
+          container.style.display = "none";
+        });
+      };
+    </script>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>UNG</title>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <div class="referencia">UNG - VINOS</div>
+    </header>
+
+    <section class="container" id="menuContainer">
+        <div>
+          <!-- Botones del menú -->
+          <a href="index.html" class="menu-button">Inicio</a>
+          <a href="promos_ung.html" class="menu-button"
+            >UNG - Vinos</a
+          >
+          <a href="promos_cvza.html" class="menu-button">Cervezas</a>
+          <a href="promos_mkp.html" class="menu-button">Almacen</a>
+          <a href="incentivos.html" class="menu-button">Incentivos</a>
+        </div>
+      </section>
+  
+
+    </section>
+
+    <section>
+        <div class="buttons-container">
+          <label for="input-imagen" class="button primary-button">Buscar imágenes</label>
+          <input type="file" id="input-imagen" accept="image/*" style="display: none;" onchange="guardarImagen(event)">
+        </div>
+  
+        <div id="contenedorImagenes" class="imagenes-container">
+          <!-- Aquí se mostrarán las imágenes encontradas -->
+        </div>
+      </section>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+
+<script src="script_promos_ung.js"></script>
+  </body>
+</html>

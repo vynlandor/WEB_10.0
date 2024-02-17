@@ -1,0 +1,177 @@
+#menuContainer {
+  position: fixed; /* Posicionar el contenedor de menú de forma fija */
+  top: 68px; /* Alinear el contenedor de menú con la parte superior */
+  left: 0; /* Alinear el contenedor de menú con la izquierda */
+  z-index: 999; /* Colocar el contenedor de menú delante de todo el contenido */
+}
+
+#header {
+  background-color: black; /* Cambiar el fondo a negro */
+  position: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Coloca el video detrás de todo el contenido */
+}
+
+.menu-desplegable {
+  margin-left: 10px;
+  margin-top: 15px; /* Ajustar margen superior */
+  margin-bottom: 20px; /* Ajustar margen inferior */
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  background-color: black; /* Cambiar el fondo a negro */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-title {
+  margin-left: 10px; /* Ajustar margen izquierdo */
+  color: white;
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  position: absolute;
+  top: 5px; /* Ajustar margen superior */
+  right: 2%; /* Alinear a la derecha */
+}
+
+.menu-title-1 {
+  margin-left: 10px; /* Ajustar margen izquierdo */
+  color: white;
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  position: absolute;
+  top: 30px; /* Ajustar margen superior */
+  right: 2%; /* Alinear a la derecha */
+}
+
+/* Puedes ajustar los estilos según tus preferencias */
+
+.container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente al 50% */
+  width: 100%;
+  height: auto;
+  margin-top: 9px;
+}
+
+.visible {
+  display: block;
+}
+
+.transparent {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Cambia el fondo a un negro transparente */
+}
+
+.menu-button {
+  margin-left: auto; /* Alinear al centro horizontalmente */
+  margin-right: auto; /* Alinear al centro horizontalmente */
+  width: 90%; /* Establecer el ancho al 80% del contenedor */
+  padding: 15px;
+  display: block; /* Mostrar los enlaces como bloques */
+  margin-bottom: 10px; /* Espacio entre los enlaces */
+  background-color: black;
+  color: white;
+  border: 2px solid white; /* Establecer el borde de 2px sólido blanco */
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.container-1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Centrar el texto horizontalmente */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos verticalmente */
+}
+
+.menu-button-1 {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(202, 125, 37);
+  color: black;
+  border: none;
+  margin-bottom: 5px; /* Espacio entre botones */
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none; /* Quita el subrayado */
+  text-align: center; /* Centra el texto */
+  line-height: 50px; /* Ajusta la altura de línea al tamaño del botón */
+}
+
+.menu-title-2 {
+  margin-bottom: 20px; /* Espacio entre la frase y los botones */
+  color: white;
+  font-size: 24px;
+}
+
+/*/////////////////////////////////////////////////////////////////// FOOTER ///////////////////////////////////////////////////////////////////*/
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*/////////////////////////////////////////////////////////////////// Consulta de medios para tamaños de pantalla menores o iguales a 600px ///////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 1500px) {
+  .container {
+    height: auto; /* Altura automática en dispositivos móviles */
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    height: auto; /* Altura automática en dispositivos móviles */
+    left: 5px;
+  }
+
+  .menu-title,
+  .menu-title-1 {
+    font-size: 18px; /* Tamaño del texto ligeramente reducido para dispositivos móviles */
+  }
+
+  .footer-content p {
+    margin-right: 50px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,141 @@
+#menuContainer {
+  position: fixed; /* Posicionar el contenedor de menú de forma fija */
+  top: 68px; /* Alinear el contenedor de menú con la parte superior */
+  left: 0; /* Alinear el contenedor de menú con la izquierda */
+  z-index: 999; /* Colocar el contenedor de menú delante de todo el contenido */
+}
+
+header {
+  background-color: black; /* Cambiar el fondo a negro */
+  position: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: static !important; /* Hacer que el cuerpo no sea fijo */
+  background-color: black;
+}
+
+.referencia {
+  color: white;
+  position: absolute;
+  top: 0; /* Cambiado de 50% a 0 para que esté en la parte superior */
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+/*/////////////////////////////////////////////////////////////////// CONTENEDOR ///////////////////////////////////////////////////////////////////*/
+
+.container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente al 50% */
+  width: 100%;
+  height: 400px;
+}
+
+.menu-desplegable {
+  margin-left: 10px;
+  margin-top: 15px; /* Ajustar margen superior */
+  margin-bottom: 20px; /* Ajustar margen inferior */
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  background-color: black; /* Cambiar el fondo a negro */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-button {
+  margin-left: auto; /* Alinear al centro horizontalmente */
+  margin-right: auto; /* Alinear al centro horizontalmente */
+  width: 90%; /* Establecer el ancho al 80% del contenedor */
+  padding: 15px;
+  display: block; /* Mostrar los enlaces como bloques */
+  margin-bottom: 10px; /* Espacio entre los enlaces */
+  background-color: black;
+  color: white;
+  border: 2px solid white; /* Establecer el borde de 2px sólido blanco */
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.menu-button-1 {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(202, 125, 37);
+  color: black;
+  border: none;
+  margin-bottom: 5px; /* Espacio entre botones */
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none; /* Quita el subrayado */
+  text-align: center; /* Centra el texto */
+  line-height: 50px; /* Ajusta la altura de línea al tamaño del botón */
+}
+
+.visible {
+  display: block;
+}
+
+.transparent {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Cambia el fondo a un negro transparente */
+}
+
+/*/////////////////////////////////////////////////////////////////// PROMOS ALMACEN ///////////////////////////////////////////////////////////////////*/
+
+/* Estilos para los botones */
+.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 200px; /* Ancho igual para ambos botones */
+}
+
+/* Estilos para el botón primario */
+.primary-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.buttons-container {
+  text-align: center;
+  margin-left: auto; /* Establece margen izquierdo automático */
+  margin-right: auto; /* Establece margen derecho automático */
+  margin-top: 50px;
+  max-width: 500px; /* Opcional: establece un ancho máximo */
+  width: 80%; /* Opcional: establece un ancho fijo */
+}
+
+/* Estilos para el hover de los botones */
+.button:hover {
+  opacity: 0.8;
+}
+
+#contenedorImagenes {
+  display: flex;
+  flex-direction: column; /* Coloca las imágenes una debajo de la otra */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100vw; /* Ocupa todo el ancho de la ventana del navegador */
+  margin-top: 50px;
+}
+
+.imagenes-container img {
+  max-width: calc(
+    100vw - 40px
+  ); /* Ancho máximo igual al ancho de la ventana del navegador menos el margen entre imágenes */
+  height: auto; /* Mantendrá la proporción de aspecto de la imagen */
+}

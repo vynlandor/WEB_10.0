@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles_index.css" />
+    <title>INICIO</title>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <h1 class="menu-title">SUPERVISOR</h1>
+      <h1 class="menu-title-1">HERNAN DUGO</h1>
+    </header>
+
+    <section class="container" id="menuContainer">
+      <div>
+        <!-- Botones del menú -->
+        <a href="index.html" class="menu-button">Inicio</a>
+        <a href="promos_ung.html" class="menu-button">UNG - Vinos</a>
+        <a href="promos_cvza.html" class="menu-button">Cervezas</a>
+        <a href="promos_mkp.html" class="menu-button">Almacen</a>
+        <a href="incentivos.html" class="menu-button">Incentivos</a>
+      </div>
+    </section>
+
+    <section class="container-1" id="menuContainer1">
+      <div class="menu">
+        <h1 class="menu-title-2">LISTAS DE PRECIOS ACTUALIZADAS</h1>
+        <!-- Botones adicionales -->
+        <a href="listas_k+t.html" class="menu-button-1">KIOSCOS Y ALMACEN</a>
+        <a href="listas_autoservicios.html" class="menu-button-1"
+          >AUTOSERVICIOS</a
+        >
+        <a href="listas_exclusivos.html" class="menu-button-1">EXCLUSIVOS</a>
+        <a href="listas_mayoristas.html" class="menu-button-1">MAYORISTAS</a>
+        <a href="listas_refrigerados.html" class="menu-button-1"
+          >REFRIGERADOS</a
+        >
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+
+    <footer>
+      <div class="footer-content">
+        <p>by Federico Saravia 2024</p>
+      </div>
+    </footer>
+  </body>
+</html>
